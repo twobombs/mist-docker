@@ -1,5 +1,5 @@
 # mist-docker
-Mist on Docker Steroids
+Mist on Docker Inception Steroids
 
 Mist wrapped in Qemu, with a noVNC WebUI sauce, served in a container.
 
@@ -12,3 +12,5 @@ Build for compulsive Rancher alpha & RC testing.
 If you also suffer from compulse baremetal host building: there are support groups for that ya know.
 
 And: don't do VMs. nor drugs. They're bad, mkay.
+
+start container with "-v /var/run/docker.sock:/var/run/docker.sock:ro"
