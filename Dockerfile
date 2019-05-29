@@ -3,7 +3,7 @@ RUN apt-get install -y docker-compose openssh-server && apt-get clean all
 RUN cd /root && wget https://github.com/mistio/mist-ce/releases/download/v4.1.0/docker-compose.yml
 
 # create root login pair ( for KVM host access )
-RUN ssh-keygen -h -G /root/.ssh/id_rsa
+# RUN ssh-keygen -h -G /root/.ssh/id_rsa
 
 # after init
 # RUN cd /root docker-compose up -d && ./bin/adduser --admin admin@example.com -p 1234
