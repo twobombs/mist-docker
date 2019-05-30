@@ -9,7 +9,7 @@ libvirtd -d && service virtlogd start && service libvirt-bin start && brctl addb
 /usr/share/novnc/utils/launch.sh --vnc localhost:5900 &
 
 service ssh start
-cd /root && docker-compose up -d
+cd /root && docker-compose up -d && docker-compose exec api ./bin/adduser --admin admin@example.com -p 1234
 
 echo "done"
 read n -1
