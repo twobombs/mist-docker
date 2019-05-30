@@ -7,7 +7,7 @@ RUN cd /root && wget https://github.com/mistio/mist-ce/releases/download/v4.1.0/
 # RUN ssh-keygen -h -G /root/.ssh/id_rsa
 
 # after init
-RUN cd /root docker-compose up -d && ./bin/adduser --admin admin@example.com -p 1234
+RUN cd /root && docker-compose up -d && docker-compose exec api ./bin/adduser --admin admin@example.com -p 1234
 
 COPY run /root/run
 RUN chmod 755 /root/run
