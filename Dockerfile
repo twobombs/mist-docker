@@ -11,3 +11,7 @@ RUN cd /root && wget https://github.com/mistio/mist-ce/releases/download/v4.1.0/
 
 COPY run /root/run
 RUN chmod 755 /root/run
+
+EXPOSE 80
+
+ENTRYPOINT /root/run
