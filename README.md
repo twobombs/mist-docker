@@ -1,20 +1,22 @@
 # mist-docker
-Mist Virtualisation platform on Docker Inception Containers
 
-start container with your favorite docker orchestrator with  the volume 
+Mist.io Virtualisation platform on Docker Inception Containers
+start container with your favorite orchestrator with the volume 
 
 "-v /var/run/docker.sock:/var/run/docker.sock:ro" added
 
-it creates an interface with the underlying docker container engine.
+it creates an interface with the hosts' docker container engine.
 
 https://www.youtube.com/watch?v=NNm8f3tIfAA
 
-once the containers are all started create an admin user in the api container
+once the containers are all started create an admin user in the 'api' container
+eg: docker-compose exec api ./bin/adduser --admin admin@example.com -p 1234
 
-docker-compose exec api ./bin/adduser --admin admin@example.com -p 1234
+Open in the WebVNC UI the virtual manager for Qemu GUI and connect to the Host.
 
-the mist container is prepared to host VMs by libvirtd & ssh via IP
+The MIST.io container is also prepared to host VMs by libvirtd & ssh via IP
+MIST.io UI will be exposed to port 80 on the Host, as it is deployed to the host root.
 
-add your public key to authorized_keys in /root/.ssh or map it in
+Add your public key to authorized_keys in /root/.ssh or map it on the Host
 
-This works with Rancher 1.x, 2.x and K8s
+This works with Rancher 1.x, 2.x and K8s.
