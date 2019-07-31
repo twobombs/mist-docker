@@ -6,8 +6,7 @@ RUN apt-get install -y docker-compose openssh-server ssh-askpass-gnome && apt-ge
 # mist-cd script v4.1.0
 RUN cd /root && wget https://github.com/mistio/mist-ce/releases/download/v4.1.1/docker-compose.yml
 
-# prepare directories
-RUN mkdir /var/lib/libvirt/images
+# prepare ssh directorie
 RUN mkdir /root/.ssh
 
 COPY run /root/run
