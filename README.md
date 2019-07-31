@@ -16,4 +16,4 @@ docker-compose exec api ./bin/adduser --admin admin@example.com -p 1234
 the mist container is prepared to host VMs by libvirtd & ssh via IP
 add your public key to authorized_keys in /root/.ssh or map it in
 
-This also works on Rancher 2.x on K8s
+This works with Rancher 1.x, 2.x and K8s
