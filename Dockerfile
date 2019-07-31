@@ -1,7 +1,7 @@
 FROM twobombs/deploy-nvidia-docker
 
 # ssh service
-RUN apt-get install -y docker-compose openssh-server && apt-get clean all
+RUN apt-get install -y docker-compose openssh-server ssh-askpass-gnome && apt-get clean all
 
 # mist-cd script v4.1.0
 RUN cd /root && wget https://github.com/mistio/mist-ce/releases/download/v4.1.0/docker-compose.yml
