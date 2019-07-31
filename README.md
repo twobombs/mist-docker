@@ -10,9 +10,9 @@ it creates an interface with the hosts' docker container engine.
 https://www.youtube.com/watch?v=NNm8f3tIfAA
 
 once the containers are all started create an admin user in the 'api' container
-eg: docker-compose exec api ./bin/adduser --admin admin@example.com -p 1234
+eg: docker-compose exec api ./bin/adduser --admin admin@example.com -p 1234 so you can login to the MIST.io page
 
-Open in the WebVNC UI the virtual manager for Qemu GUI and connect to the Host.
+Open in the WebVNC UI at port 6080 the virtual manager for Qemu GUI and connect to the Host. ( password is default 00000000 )
 
 The MIST.io container is also prepared to host VMs by libvirtd & ssh via IP
 MIST.io UI will be exposed to port 80 on the Host, as it is deployed to the host root.
