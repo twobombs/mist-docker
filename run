@@ -12,4 +12,5 @@ service ssh start
 cd /root && docker-compose up -d && docker-compose exec api ./bin/adduser --admin admin@example.com -p 1234
 
 echo "done"
-read n -1
+
+tail -f /dev/null
