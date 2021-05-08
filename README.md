@@ -24,4 +24,5 @@ The MIST.io UI will be exposed to port 80 on the Host, as it is deployed to the 
 
 Add your public key to authorized_keys in /root/.ssh or map it on the Host
 
-This works with Rancher 1.x, 2.x and K8s.
+This works with Docker CLI, Rancher 1.x, 2.x and K8s.
+docker run -d -p80:80 -p6080:6080 -v /var/run/docker.sock:/var/run/docker.sock:ro twobombs/mist-docker
